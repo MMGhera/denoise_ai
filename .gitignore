@@ -1,0 +1,20 @@
+# Python cache and environments
+__pycache__/
+*.py[cod]
+.venv/
+.idea/
+
+
+# Image folders and local datasets
+img_misc/
+training_dataset/
+dataset.h5
+
+# Archives and temporary outputs
+results.zip
+
+# Compiled model weights (upload these to GitHub Releases instead)
+*.pt
+*.onnx
+*.onnx.data
+*.dtmodel

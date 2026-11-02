@@ -1,0 +1,22 @@
+{
+    "id": "custom-raw-unet",
+    "name": "custom raw unet denoiser",
+    "description": "5-channel U-Net trained on RAW Bayer patches with synthetic noise conditioning",
+    "task": "rawdenoise",
+    "arch": "unet",
+    "backend": "onnx",
+    "version": "1.0",
+    "tiling": true,
+    "attributes": {
+        "input_sizes": [
+            512
+        ],
+        "model_bayer": {
+            "input_kind": "bayer_v1",
+            "bayer_orientation": "force_rggb",
+            "edge_pad": "mirror_cropped",
+            "wb_norm": "none",
+            "output_scale": "match_gain"
+        }
+    }
+}
